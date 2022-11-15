@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/4edfb60331.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css\main.css" />
+    <!-- Website Icon -->
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/8/87/Globe_icon_2.svg"
+    />
+  </head>
+  <body>
+    <div class="progress">
+      <!-- Question Progress -->
+      <div
+        class="progress__questionParent progress__questionParent__active progress__one"
+      >
+        <div class="progress__point center">1</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__two">
+        <div class="progress__line"></div>
+        <div class="progress__point center">2</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__three">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">3</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__four">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">4</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__five">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">5</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__six">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">6</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__seven">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">7</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__eight">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">8</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__nine">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">9</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__ten">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">10</div>
+      </div>
+      <!-- Question Progress -->
+      <div class="progress__questionParent progress__result">
+        <div class="progress__line"></div>
+        <div class="progress__point progress__unactive center">
+          <i class="fas fa-flag-checkered progress__icon"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="content center">
+      <div class="content__questionHolder">
+        <h2 class="content__question" id="questionField"></h2>
+
+        <div class="content__list" id="options">
+          <div class="content__list__questionSelector">
+            <input
+              type="radio"
+              value="1"
+              id="radio1"
+              name="question"
+              class="content__list__radio"
+            />
+            <span class="content__list__checkmark"></span>
+            <label
+              for="radio1"
+              id="label1"
+              class="content__list__label"
+            ></label>
+          </div>
+
+          <div class="content__list__questionSelector">
+            <input
+              type="radio"
+              value="2"
+              id="radio2"
+              name="question"
+              class="content__list__radio"
+            />
+            <span class="content__list__checkmark"></span>
+            <label
+              for="radio2"
+              id="label2"
+              class="content__list__label"
+            ></label>
+          </div>
+
+          <div class="content__list__questionSelector">
+            <input
+              type="radio"
+              value="3"
+              id="radio3"
+              name="question"
+              class="content__list__radio"
+            />
+            <span class="content__list__checkmark"></span>
+            <label
+              for="radio3"
+              id="label3"
+              class="content__list__label"
+            ></label>
+          </div>
+
+          <div class="content__list__questionSelector">
+            <input
+              type="radio"
+              value="4"
+              id="radio4"
+              name="question"
+              class="content__list__radio"
+            />
+            <span class="content__list__checkmark"></span>
+            <label
+              for="radio4"
+              id="label4"
+              class="content__list__label"
+            ></label>
+          </div>
+        </div>
+
+        <div class="content__questionHolder__buttons">
+          <button type="button" id="previous" class="previous">
+            Wcześniejsze
+          </button>
+          <button type="button" id="next" class="next">Następne</button>
+        </div>
+      </div>
+
+      <div class="content__svg">
+        <img src="" id="img" />
+      </div>
+    </div>
+
+    <div class="results">
+      <h2 class="results__header">
+        Gratulacje twój wynik to: <span id="showResult">70%</span>
+      </h2>
+      <div class="explanation">
+        <div class="explanation__vertical">
+          <div class="explanation__vertical__buttons center">
+            <div class="wrapper">
+              <div class="explanation__vertical__buttons__button center">1</div>
+              <div class="explanation__vertical__buttons__button center">2</div>
+              <div class="explanation__vertical__buttons__button center">3</div>
+              <div class="explanation__vertical__buttons__button center">4</div>
+              <div class="explanation__vertical__buttons__button center">5</div>
+            </div>
+            <div class="wrapper">
+              <div class="explanation__vertical__buttons__button center">6</div>
+              <div class="explanation__vertical__buttons__button center">7</div>
+              <div class="explanation__vertical__buttons__button center">8</div>
+              <div class="explanation__vertical__buttons__button center">9</div>
+              <div class="explanation__vertical__buttons__button center">
+                10
+              </div>
+            </div>
+          </div>
+          <div class="explanation__vertical__informations">
+            <h3 class="explanation__header">
+              Poprawna odpowiedź: <span id="correctAnswer">A</span>
+            </h3>
+            <h3 class="explanation__header">
+              Twoja odpowiedź: <span id="userAnswer">A</span>
+            </h3>
+            <h3 class="explanation__header">
+              Źródło pytania:
+              <a
+                id="questionSource"
+                target="_blank"
+                href="https://fajnepodroze.pl/100-ciekawostek-ze-swiata/"
+                >Sprawdź</a
+              >
+            </h3>
+          </div>
+        </div>
+
+        <div class="explanation__question">
+          <div class="wrapper">
+            <h3 class="explanation__header">Treść pytania:</h3>
+            <p class="explanation__text" id="questionValue">
+              Lorem ipsum nor sit amet ostrum ipsa eaque odit doloribus totam
+              impedit nesciunt?
+            </p>
+          </div>
+          <div class="wrapper">
+            <h3 class="explanation__header">Wyjaśnienie:</h3>
+            <p class="explanation__text" id="questionMeaning">
+              Lorem ipsum nor sit amet ostrum ipsa eaque odit doloribus totam
+              impedit nesciunt?Lorem ipsum nor sit amet ostrum ipsa eaque odit
+              doloribus totam impedit nesciunt?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer center">
+      <div class="container">
+        <div class="container__headers">
+          <h2 class="footer__header">Zakres quizzu</h2>
+          <h2 class="footer__header">Informacje</h2>
+        </div>
+        <div class="informations">
+          <div class="footer__information1">
+            <h3 class="footer__listHeader">
+              <span></span>Cały quizz posiada 10 różnych pytań z zakresu wiedzy
+              ogólnej w tym z dziedzin takie jak:
+            </h3>
+            <div class="footer__information1__subjects">
+              <h4 class="footer__subHeader">
+                <span></span> Mitologia Słowiańska
+              </h4>
+              <h4 class="footer__subHeader"><span></span> Geografia</h4>
+              <h4 class="footer__subHeader"><span></span> Astronomia</h4>
+              <h4 class="footer__subHeader"><span></span> Językoznastwo</h4>
+              <h4 class="footer__subHeader"><span></span> Zoologia</h4>
+              <h4 class="footer__subHeader"><span></span> Etymologia</h4>
+            </div>
+          </div>
+          <div class="footer__otherInformations">
+            <h3 class="footer__listHeader">
+              <span></span>Po zakończeniu quizzu wyświetli się wasz procentowy
+              wynik wraz z możliwością sprawdzenia poprawnych odpowiedzi
+            </h3>
+            <h3 class="footer__listHeader footer__other">
+              <span></span>
+              <p>
+                Wszystkie ilustracje wykorzystane w quizzie pochodzą z
+                <a href="https://storyset.com" target="_blank"
+                  >illustrations by Storyset</a
+                >
+              </p>
+            </h3>
+            <h3 class="footer__listHeader">
+              <span></span>Quizz został wykonany jak i zaprojektowany przez:
+              Filip Natanek
+            </h3>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
